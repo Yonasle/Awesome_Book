@@ -49,3 +49,10 @@ form.addEventListener("submit", (e) => {
 
 // Remove data from local storage
 // eslint-disable-next-line no-unused-vars
+function removeBook(i) {
+  storeData.splice(i, 1);
+  updateData();
+  displayBooks();
+}
+// Call the displayBooks function on page load
+window.onload = displayBooks;
