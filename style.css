@@ -9,17 +9,24 @@ hr {
   margin-top: 20px;
   width: 7%;
 }
+
 .book-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 30%;
-  border: 2px solid #000;
 }
 
+.book-list .container {
+  border: 2px solid #000;
+  width: 100%;
+}
 
 .book-list .book-item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 5px 20px;
+  padding: 8px 20px;
 }
 
 .book-item:nth-child(odd) {
