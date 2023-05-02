@@ -69,3 +69,26 @@ function removeBook(i) {
 }
 // Call the displayBooks function on page load
 window.onload = displayBooks;
+
+// link features
+const list = document.querySelector('.book-list');
+const newbook = document.querySelector('.add-new-book');
+const contact = document.querySelector('.contact');
+const spanlist = document.querySelector('.list');
+const spanaddnew = document.querySelector('.add-new');
+const spancontact = document.querySelector('.contact-info');
+spanaddnew.addEventListener('click', () => {
+  list.className = 'non-display';
+  contact.className = 'non-display';
+  newbook.className = 'add_new-book';
+});
+spanlist.addEventListener('click', () => {
+  contact.className = 'non-display';
+  newbook.className = 'non-display';
+  list.className = 'book-list';
+});
+spancontact.addEventListener('click', () => {
+  newbook.classList.replace('add_new-book', 'non-display');
+  list.classList.replace('book-list', 'non-display');
+  contact.classList.replace('non-display', 'contact');
+});

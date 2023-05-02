@@ -8,23 +8,44 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <nav class="nav">
+      <span>Awesome Books</span>
+      <div>
+        <span class="list">List</span>
+        <span class="add-new">Add new</span>
+        <span class="contact-info">Contact</span>
+      </div>
+    </nav>
     <div class="book-list">
       <h1>Awesome Book</h1>
       <div class="container"></div>
     </div>
-
-    <hr>
-    <h2 class="add_new-book">Add new Book</h2>
-    <form class="form add-new-book" id="form">
-      <input type="text" name="title" placeholder="Title" class="title" /><br />
-      <input
-        type="text"
-        name="title"
-        placeholder="Author"
-        class="author"
-      /><br />
-      <button class="add-btn" type="submit">Add</button>
-    </form>
+    <div class="add_new-book">
+      <h2 class="">Add new Book</h2>
+      <form class="form" id="form">
+        <input type="text" name="title" placeholder="Title" class="title" /><br />
+        <input
+          type="text"
+          name="title"
+          placeholder="Author"
+          class="author"
+        /><br />
+        <button class="add-btn" type="submit">Add</button>
+      </form>
+    </div>
+    <div class="contact">
+      <h2>Contact Information</h2>
+      <p>Do you have any question or you went to say "Hallo"?<br>
+      You can reach out to us ;-</p>
+      <ul>
+        <li>Email : abdce@gmail.com</li>
+        <li>Phone number : +251637463534</li>
+        <li>Email2 : abdce@gmail.com</li>
+      </ul>
+    </div>
+    <div class="copy-right">
+      Copy right
+    </div>
     <script src="index.js"></script>
   </body>
 </html>

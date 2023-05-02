@@ -5,6 +5,29 @@ body {
   gap: 2px;
 }
 
+.nav {
+  padding: 10px 25px;
+  width: 97%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px #000 solid;
+  gap: 10px;
+}
+
+.nav div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.nav div span {
+  cursor: pointer;
+  padding: 0 20px;
+  border-right: 2px solid #000;
+  text-decoration: none;
+}
+
 hr {
   margin-top: 20px;
   width: 7%;
@@ -14,7 +37,7 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 30%;
+  width: 100%;
 }
 
 .book-list .container {
@@ -39,7 +62,9 @@ hr {
   gap: 10px;
 }
 
-.book-list .book-item button {
+.add_new-book {
+  display: flex;
+  flex-direction: column;
 }
 
 .form {
@@ -50,4 +75,20 @@ hr {
 .form button {
   width: 40px;
   align-self: flex-end;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.copy-right {
+  margin-top: 20px;
+  width: 97%;
+  border: 1px solid #474646;
+  padding: 20px;
+}
+
+.non-display {
+  display: none;
 }
