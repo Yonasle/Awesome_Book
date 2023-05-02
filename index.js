@@ -18,13 +18,24 @@ function displayBooks() {
   const listOfBooks = document.querySelector('.container');
   listOfBooks.innerHTML = '';
   storeData.forEach((book, i) => {
-    const bookItem = document.createElement('li');
+    const bookItem = document.createElement('div');
+    bookItem.className = 'book-item';
     bookItem.style.listStyleType = 'none'; // add this line to remove the bullet points
-    bookItem.innerHTML = `
-      <p>${book.title}</p>
-      <p>${book.author}</p>
-      <button onclick="removeBook(${i})">Remove</button>
+
+    const bookinfo = document.createElement('div');
+    bookinfo.className = 'book-info';
+    bookinfo.innerHTML = `
+      <span>${book.title}</span>
+      <span> by ${book.author}</span>
     `;
+    bookItem.appendChild(bookinfo);
+
+    const rmvbtn = document.createElement('div');
+    rmvbtn.className = 'remov-button';
+    rmvbtn.innerHTML = `
+    <button onclick="removeBook(${i})">Remove</button>
+    `;
+    bookItem.appendChild(rmvbtn);
     listOfBooks.appendChild(bookItem);
   });
 }
