@@ -46,9 +46,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   const title = document.querySelector(".title").value;
   const author = document.querySelector(".author").value;
-  if(title !== null || author !== null){
-    addNewData(title, author);
-  }  
+  addNewData(title, author);
 });
 
 // Remove data from local storage
