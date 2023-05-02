@@ -31,20 +31,24 @@ function displayBooks() {
 
 // Add new data to local storage
 function addNewData(bookTitle, bookAuthor) {
-  const book = {
-    title: bookTitle,
-    author: bookAuthor,
-  };
-  storeData.push(book);
-  updateData();
-  displayBooks();
+  if (bookTitle.trim() !== '' && bookAuthor.trim() !== '') {
+    const book = {
+      title: bookTitle,
+      author: bookAuthor,
+    };
+    storeData.push(book);
+    updateData();
+    displayBooks();
+  }
 }
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const title = document.querySelector(".title").value;
   const author = document.querySelector(".author").value;
-  addNewData(title, author);
+  if(title !== null || author !== null){
+    addNewData(title, author);
+  }  
 });
 
 // Remove data from local storage
