@@ -1,3 +1,10 @@
+const date = new Date();
+const n = date.toDateString();
+const time = date.toLocaleTimeString();
+const disdate = document.querySelector('.date');
+const p = document.createElement('p');
+p.innerHTML = `${n}, ${time}`;
+disdate.appendChild(p);
 // Check if local storage is empty, then add an empty array
 
 if (localStorage.getItem('addedBooks') === null) {
