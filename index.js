@@ -49,6 +49,8 @@ function displayBooks() {
 
 // Add new data to local storage
 const error = document.querySelector('.error');
+const t = document.querySelector('.title');
+const a = document.querySelector('.author');
 function addNewData(bookTitle, bookAuthor) {
   if (bookTitle.trim() !== '' && bookAuthor.trim() !== '') {
     const book = {
@@ -60,6 +62,8 @@ function addNewData(bookTitle, bookAuthor) {
     displayBooks();
     error.innerHTML = 'Success !!!';
     error.classList.replace('error', 'success');
+    t.value = '';
+    a.value = '';
   }
   else {
     error.classList.replace('success', 'error');
@@ -78,14 +82,6 @@ const addbtn = document.createElement('span');
 addbtn.innerHTML = `
 <button onclick={SubmitBook()}>Add</button>`;
 addbtndiv.appendChild(addbtn);
-
-const form = document.querySelector('form');
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const title = document.querySelector('.title').value;
-  const author = document.querySelector('.author').value;
-  addNewData(title, author);
-});
 
 // Remove data from local storage
 // eslint-disable-next-line no-unused-vars
@@ -108,27 +104,38 @@ const spancontact = document.querySelector('.contact-info');
 spanlist.addEventListener('click', () => {
   newbook.classList.remove('add_new-book');
   newbook.classList.add('non-display');
+  spanaddnew.classList.remove('color');
 
   contact.classList.remove('contect');
   contact.classList.add('non-display');
+  spancontact.classList.remove('color');
 
   list.classList.remove('non-display');
   list.classList.add('book-list');
+  spanlist.classList.add('color');
 });
 
 spanaddnew.addEventListener('click', () => {
   contact.classList.remove('contect');
   contact.classList.add('non-display');
+  spancontact.classList.remove('color');
 
   list.classList.remove('book-list');
   list.classList.add('non-display');
+  spanlist.classList.remove('color');
 
   newbook.classList.remove('non-display');
   newbook.classList.add('add_new-book');
+  spanaddnew.classList.add('color');
 });
 
 spancontact.addEventListener('click', () => {
-  newbook.classList.replace('add_new-book', 'non-display');
+  newbook.classList.replace('add_new-book', 'non-display');  
+  spanaddnew.classList.remove('color');
+
   list.classList.replace('book-list', 'non-display');
+  spanlist.classList.remove('color');
+
   contact.classList.replace('non-display', 'contact');
+  spancontact.classList.add('color');
 });

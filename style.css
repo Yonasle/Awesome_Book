@@ -141,3 +141,7 @@ hr {
 .display {
   display: flex;
 }
+
+.color {
+  color: blue;
+}
