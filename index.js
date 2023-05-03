@@ -18,18 +18,30 @@ function displayBooks() {
   const listOfBooks = document.querySelector('.container');
   listOfBooks.innerHTML = '';
   storeData.forEach((book, i) => {
-    const bookItem = document.createElement('li');
+    const bookItem = document.createElement('div');
+    bookItem.className = 'book-item';
     bookItem.style.listStyleType = 'none'; // add this line to remove the bullet points
-    bookItem.innerHTML = `
-      <p>${book.title}</p>
-      <p>${book.author}</p>
-      <button onclick="removeBook(${i})">Remove</button>
+
+    const bookinfo = document.createElement('div');
+    bookinfo.className = 'book-info';
+    bookinfo.innerHTML = `
+      <span>${book.title}</span>
+      <span> by ${book.author}</span>
     `;
+    bookItem.appendChild(bookinfo);
+
+    const rmvbtn = document.createElement('div');
+    rmvbtn.className = 'remov-button';
+    rmvbtn.innerHTML = `
+    <button onclick="removeBook(${i})">Remove</button>
+    `;
+    bookItem.appendChild(rmvbtn);
     listOfBooks.appendChild(bookItem);
   });
 }
 
 // Add new data to local storage
+const error = document.querySelector('.error');
 function addNewData(bookTitle, bookAuthor) {
   if (bookTitle.trim() !== '' && bookAuthor.trim() !== '') {
     const book = {
@@ -39,6 +51,9 @@ function addNewData(bookTitle, bookAuthor) {
     storeData.push(book);
     updateData();
     displayBooks();
+  }
+  else {
+    error.innerHTML = 'Auther or Book Title can"t be empty';
   }
 }
 const form = document.querySelector('form');
