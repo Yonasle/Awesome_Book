@@ -48,6 +48,7 @@ hr {
 }
 .form .error {
   color: red;
+  font-size: 10px;
 }
 .form button {
   width: 40px;
