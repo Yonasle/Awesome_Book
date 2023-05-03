@@ -46,7 +46,9 @@ hr {
   display: flex;
   flex-direction: column;
 }
-
+.form .error {
+  color: red;
+}
 .form button {
   width: 40px;
   align-self: flex-end;
