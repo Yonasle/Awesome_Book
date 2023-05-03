@@ -15,13 +15,13 @@
 
     <hr />
     <h2 class="add_new-book">Add new Book</h2>
-    <form class="form add-new-book" id="form">
+    <form  onsubmit="event.preventDefault();" class="form add-new-book" id="form">
       <input type="text" name="title" placeholder="Title" class="title" /><br />
       <input type="text" name="title" placeholder="Author" class="author" />
       <br />
       <div class="error"></div>
       <br />
-      <button class="add-btn" type="submit">Add</button>
+      <div class="add-btn-div"></div>
     </form>
     <script src="index.js"></script>
   </body>

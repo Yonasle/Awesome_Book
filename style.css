@@ -48,3 +48,9 @@ hr {
   color: red;
   font-size: 10px;
 }
+.form .add-btn-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
