@@ -1,4 +1,3 @@
-/* eslint-disable */
 // Check if local storage is empty, then add an empty array
 
 if (localStorage.getItem('addedBooks') === null) {
@@ -60,7 +59,7 @@ function addNewData(bookTitle, bookAuthor) {
     error.innerHTML = 'Auther or Book Title can"t be empty';
   }
 }
-
+// eslint-disable-next-line no-unused-vars
 function SubmitBook() {
   const title = document.querySelector('.title').value;
   const author = document.querySelector('.author').value;
