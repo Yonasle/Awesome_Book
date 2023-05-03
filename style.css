@@ -1,3 +1,56 @@
 body {
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+hr {
+  margin-top: 20px;
+  width: 7%;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+.book-list .container {
+  border: 2px solid #000;
+  width: 100%;
+}
+
+.book-list .book-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 8px 20px;
+}
+
+.book-item:nth-child(odd) {
+  background: #efefef;
+}
+
+.book-list .book-item .book-info {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form .error {
+  color: red;
+  font-size: 10px;
+}
+
+.form .add-btn-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
 }
