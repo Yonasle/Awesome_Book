@@ -15,17 +15,35 @@ body {
   gap: 10px;
 }
 
+.nav > span {
+  font-size: larger;
+  font-weight: bold;
+}
+
 .nav div {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
 
+.nav div a {
+  text-decoration: none;
+}
+
 .nav div span {
   cursor: pointer;
   padding: 0 20px;
-  border-right: 2px solid #000;
+  border-right: 1px solid #000;
   text-decoration: none;
+}
+
+.nav div .contact-info{
+  border-right: 0px solid #000;
+}
+
+.nav div span:active,
+.nav div span:focus {
+  color: blueviolet;
 }
 
 hr {
@@ -37,7 +55,7 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 50%;
 }
 
 .book-list .container {
@@ -72,6 +90,18 @@ hr {
   flex-direction: column;
 }
 
+.form .error {
+  color: red;
+  font-size: 10px;
+  text-align: center;
+}
+
+.form .success {  
+  color: rgb(3, 170, 3);
+  font-size: 12px;
+  text-align: center;
+}
+
 .form button {
   width: 40px;
   align-self: flex-end;
@@ -87,8 +117,14 @@ hr {
   width: 97%;
   border: 1px solid #474646;
   padding: 20px;
+  position: sticky;
+  bottom: 0;
 }
 
 .non-display {
   display: none;
+}
+
+.display {
+  display: flex;
 }

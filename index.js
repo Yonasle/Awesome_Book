@@ -41,6 +41,7 @@ function displayBooks() {
 }
 
 // Add new data to local storage
+const error = document.querySelector('.error');
 function addNewData(bookTitle, bookAuthor) {
   if (bookTitle.trim() !== '' && bookAuthor.trim() !== '') {
     const book = {
@@ -50,8 +51,27 @@ function addNewData(bookTitle, bookAuthor) {
     storeData.push(book);
     updateData();
     displayBooks();
+    error.innerHTML = 'Success !!!';
+    error.classList.replace('error', 'success');
+  }
+  else {
+    error.classList.replace('success', 'error');
+    error.innerHTML = 'Auther or Book Title can"t be empty';
   }
 }
+// eslint-disable-next-line no-unused-vars
+function SubmitBook() {
+  const title = document.querySelector('.title').value;
+  const author = document.querySelector('.author').value;
+  addNewData(title, author);
+}
+
+const addbtndiv = document.querySelector('.add-btn-div');
+const addbtn = document.createElement('span');
+addbtn.innerHTML = `
+<button onclick={SubmitBook()}>Add</button>`;
+addbtndiv.appendChild(addbtn);
+
 const form = document.querySelector('form');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -72,21 +92,34 @@ window.onload = displayBooks;
 
 // link features
 const list = document.querySelector('.book-list');
-const newbook = document.querySelector('.add-new-book');
+const newbook = document.querySelector('.add_new-book');
 const contact = document.querySelector('.contact');
 const spanlist = document.querySelector('.list');
 const spanaddnew = document.querySelector('.add-new');
 const spancontact = document.querySelector('.contact-info');
-spanaddnew.addEventListener('click', () => {
-  list.className = 'non-display';
-  contact.className = 'non-display';
-  newbook.className = 'add_new-book';
-});
+
 spanlist.addEventListener('click', () => {
-  contact.className = 'non-display';
-  newbook.className = 'non-display';
-  list.className = 'book-list';
+  newbook.classList.remove('add_new-book');
+  newbook.classList.add('non-display');
+
+  contact.classList.remove('contect');
+  contact.classList.add('non-display');
+
+  list.classList.remove('non-display');
+  list.classList.add('book-list');
 });
+
+spanaddnew.addEventListener('click', () => {
+  contact.classList.remove('contect');
+  contact.classList.add('non-display');
+
+  list.classList.remove('book-list');
+  list.classList.add('non-display');
+
+  newbook.classList.remove('non-display');
+  newbook.classList.add('add_new-book');
+});
+
 spancontact.addEventListener('click', () => {
   newbook.classList.replace('add_new-book', 'non-display');
   list.classList.replace('book-list', 'non-display');
