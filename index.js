@@ -41,6 +41,7 @@ function displayBooks() {
 }
 
 // Add new data to local storage
+const error = document.querySelector('.error');
 function addNewData(bookTitle, bookAuthor) {
   if (bookTitle.trim() !== '' && bookAuthor.trim() !== '') {
     const book = {
@@ -50,6 +51,9 @@ function addNewData(bookTitle, bookAuthor) {
     storeData.push(book);
     updateData();
     displayBooks();
+  }
+  else {
+    error.innerHTML = 'Auther or Book Title can"t be empty';
   }
 }
 const form = document.querySelector('form');
