@@ -51,8 +51,7 @@ function addNewData(bookTitle, bookAuthor) {
     storeData.push(book);
     updateData();
     displayBooks();
-  }
-  else {
+  } else {
     error.innerHTML = 'Auther or Book Title can"t be empty';
   }
 }

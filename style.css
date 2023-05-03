@@ -39,18 +39,12 @@ hr {
   gap: 10px;
 }
 
-.book-list .book-item button {
-}
-
 .form {
   display: flex;
   flex-direction: column;
 }
+
 .form .error {
   color: red;
   font-size: 10px;
-}
-.form button {
-  width: 40px;
-  align-self: flex-end;
 }
