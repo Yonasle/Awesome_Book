@@ -90,6 +90,12 @@ hr {
   flex-direction: column;
 }
 
+.form .add-btn-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+}
+
 .form .error {
   color: red;
   font-size: 10px;
