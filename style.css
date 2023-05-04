@@ -87,10 +87,12 @@ hr {
   gap: 10px;
 }
 
+
 .add_new-book {
   display: flex;
   flex-direction: column;
 }
+
 
 .form {
   display: flex;
@@ -118,6 +120,17 @@ hr {
 .form button {
   width: 40px;
   align-self: flex-end;
+
+.form .error {
+  color: red;
+  font-size: 10px;
+}
+
+.form .add-btn-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+
 }
 
 .contact {
