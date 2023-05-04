@@ -21,6 +21,7 @@
       <h1>Awesome Book</h1>
       <div class="container"></div>
     </div>
+
     <div class="add_new-book non-display">
       <h2 class="">Add new Book</h2>
       <form onsubmit="event.preventDefault();" class="form" id="form">
@@ -54,6 +55,19 @@
       </ul>
     </div>
     <div class="copy-right">Copyright</div>
+
+
+    <hr />
+    <h2 class="add_new-book">Add new Book</h2>
+    <form  onsubmit="event.preventDefault();" class="form add-new-book" id="form">
+      <input type="text" name="title" placeholder="Title" class="title" /><br />
+      <input type="text" name="title" placeholder="Author" class="author" />
+      <br />
+      <div class="error"></div>
+      <br />
+      <div class="add-btn-div"></div>
+    </form>
+
     <script src="index.js"></script>
   </body>
 </html>

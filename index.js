@@ -25,9 +25,14 @@ function displayBooks() {
   const listOfBooks = document.querySelector(".container");
   listOfBooks.innerHTML = "";
   storeData.forEach((book, i) => {
+
     const bookItem = document.createElement("div");
     bookItem.className = "book-item";
     bookItem.style.listStyleType = "none"; // add this line to remove the bullet points
+
+    const bookItem = document.createElement('div');
+    bookItem.className = 'book-item'; // add this line to remove the bullet points
+
 
     const bookinfo = document.createElement("div");
     bookinfo.className = "book-info";
@@ -48,9 +53,15 @@ function displayBooks() {
 }
 
 // Add new data to local storage
+
 const error = document.querySelector(".error");
 const t = document.querySelector(".title");
 const a = document.querySelector(".author");
+
+const error = document.querySelector('.error');
+const t = document.querySelector('.title');
+const a = document.querySelector('.author');
+
 function addNewData(bookTitle, bookAuthor) {
   if (bookTitle.trim() !== "" && bookAuthor.trim() !== "") {
     const book = {
@@ -60,17 +71,25 @@ function addNewData(bookTitle, bookAuthor) {
     storeData.push(book);
     updateData();
     displayBooks();
+
     error.innerHTML = "Success !!!";
     error.classList.replace("error", "success");
     t.value = "";
     a.value = "";
   } else {
     error.classList.replace("success", "error");
+
+    error.innerHTML = '';
+    t.value = '';
+    a.value = '';
+  } else {
+
     error.innerHTML = 'Auther or Book Title can"t be empty';
   }
 }
 // eslint-disable-next-line no-unused-vars
 function SubmitBook() {
+
   const title = document.querySelector(".title").value;
   const author = document.querySelector(".author").value;
   addNewData(title, author);
@@ -78,6 +97,15 @@ function SubmitBook() {
 
 const addbtndiv = document.querySelector(".add-btn-div");
 const addbtn = document.createElement("span");
+
+  const title = document.querySelector('.title').value;
+  const author = document.querySelector('.author').value;
+  addNewData(title, author);
+}
+
+const addbtndiv = document.querySelector('.add-btn-div');
+const addbtn = document.createElement('span');
+
 addbtn.innerHTML = `
 <button onclick={SubmitBook()}>Add</button>`;
 addbtndiv.appendChild(addbtn);
