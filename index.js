@@ -32,7 +32,7 @@ function displayBooks() {
     const bookinfo = document.createElement("div");
     bookinfo.className = "book-info";
     bookinfo.innerHTML = `
-      <span>"${book.title}"</span>
+      <span>${book.title}</span>
       <span> by ${book.author}</span>
     `;
     bookItem.appendChild(bookinfo);
