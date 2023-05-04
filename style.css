@@ -37,8 +37,8 @@ body {
   text-decoration: none;
 }
 
-.nav div .contact-info{
-  border-right: 0px solid #000;
+.nav div .contact-info {
+  border-right: 0 solid #000;
 }
 
 .nav div span:active,
@@ -109,7 +109,7 @@ hr {
   text-align: center;
 }
 
-.form .success {  
+.form .success {
   color: rgb(3, 170, 3);
   font-size: 12px;
   text-align: center;
