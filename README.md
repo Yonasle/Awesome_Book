@@ -4,7 +4,7 @@
   <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h3><b>Awesome Book</b></h3>
+  <h3><b>Awesome Book with ES6</b></h3>
 
 </div>
 
@@ -68,6 +68,8 @@
 - [ ] **[Add_new_Books]**
 - [ ] **[Remove_book_from_list]**
 - [ ] **[Display_Book_List]**
+- [ ] **[Add Time using Luxon Library]**
+- [ ] **[Refactor using ES6]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -161,25 +163,12 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> The following are the authers of the project
-
-👤 **Gergito K**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Abenezer**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 👤 **Yonas**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/Yonasle)
+- Twitter: [@twitterhandle](https://twitter.com/Yonasls)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/yonas-lemma-b8848823a/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
