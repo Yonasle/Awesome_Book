@@ -45,5 +45,4 @@ class InsertBooks {
   }
 }
 
-/* eslint-disable import/prefer-default-export */
-export { InsertBooks };
+export default InsertBooks;

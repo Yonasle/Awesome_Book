@@ -1,5 +1,5 @@
 import { DateTime } from './luxon.js';
-import { InsertBooks } from './addBooks.js';
+import InsertBooks from './addBooks.js';
 import myNav from './navigator.js';
 import bookList from './bookList.js';
 
